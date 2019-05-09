@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.RegisterActivity"
+    android:background="@color/colorAccent">
+
+
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="150dp"
+        android:padding="5dp"
+        android:background="#daffffff"
+        android:hint="Full Name"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etUserEmail"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/etUserName"
+        android:layout_marginTop="15dp"
+        android:background="#daffffff"
+        android:padding="5dp"
+        android:hint="Email"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="textEmailAddress" />
+    <EditText
+        android:id="@+id/etUserPassword"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="5dp"
+        android:layout_below="@+id/etUserEmail"
+        android:layout_marginTop="15dp"
+        android:background="#daffffff"
+        android:hint="Password"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:inputType="textPassword" />
+
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_below="@+id/etUserPassword"
+        android:layout_margin="20dp"
+        android:background="#03b903"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/question2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signUpButton"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:textSize="16sp"
+        android:text="Alredy have account?"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/logInback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/question2"
+        android:layout_below="@id/signUpButton"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:text="Log In"
+        android:textColor="#0099ff"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:textColor="@android:color/white"
+        android:text="Registration"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

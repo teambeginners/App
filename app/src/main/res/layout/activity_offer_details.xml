@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/detailsBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/offerDetailsToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Offer Details"
+            tools:ignore="MissingConstraints" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/detailsBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/nameCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/proImage"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/swiggy" />
+
+                    <TextView
+                        android:id="@+id/namePro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/proImage"
+                        android:text="Swiggy"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/proCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/namePro"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/proImage"
+                        android:text="Food and Drinks "
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/offerDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/proImage"
+                        android:layout_marginTop="5dp"
+                        android:text="We are giving the best ofers for you!!"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/cashImg"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/offerDetails"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/cash" />
+
+                    <TextView
+                        android:id="@+id/cdOffer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/offerDetails"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/cashImg"
+                        android:text="Upto 20% Cd cashback avialable"
+                        android:textAllCaps="true"
+                        android:textColor="#006920" />
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/descriptionCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameCard"
+                android:layout_margin="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/descrHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Description"
+                        android:textColor="@android:color/black"
+                         />
+
+                    <TextView
+                        android:id="@+id/descr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/descrHead"
+                        android:layout_marginTop="7dp"
+                        android:text="• Get 50% off on first order on Swiggy. \n• No minimum order value.\n• Maximum discount is tk. 100.\n• Valid in all cities in Bangladesh." />
+
+                    <TextView
+                        android:id="@+id/successDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/descr"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="80% Succeeded"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/todayDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/descr"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        android:text="342 Uses Today"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/codeCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/descriptionCard"
+                android:layout_margin="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/codeHead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dp"
+                        android:text="Coupon Code"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/codeHead"
+                        android:padding="10dp"
+                        android:text="bingobd"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/copyCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/code"
+                        android:paddingStart="5dp"
+                        android:text="copy code"
+                        android:textAllCaps="true"
+                        android:textColor="#0369F8"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/unlike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:paddingEnd="5dp"
+                        android:src="@drawable/unlike" />
+
+                    <ImageView
+                        android:id="@+id/like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toStartOf="@+id/unlike"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/like" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toStartOf="@+id/like"
+                        android:paddingEnd="8dp"
+                        android:text="Did it work?"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/shopViaCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_below="@+id/codeCard">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+                    <TextView
+                        android:id="@+id/shopViaId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@android:color/black"
+                        android:text="Shop Via"/>
+                    
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/viaMobileWebCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_below="@+id/shopViaId">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/viaMobileWebText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="Mobile Web"
+                                android:textColor="@android:color/black"/>
+                            <TextView
+                                android:id="@+id/uptoValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@+id/viaMobWebRB"
+                                android:padding="5dp"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/black"
+                                android:text="Upto $21\nCD CASHBACK"/>
+
+                            <RadioButton
+                                android:id="@+id/viaMobWebRB"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"/>
+                        </RelativeLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/viaMobileAppCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:layout_below="@+id/viaMobileWebCard">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:id="@+id/viaMobileAppText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="Mobile App"
+                                android:textColor="@android:color/black"/>
+                            <TextView
+                                android:id="@+id/cashbackMsg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@+id/viaMobAppRB"
+                                android:padding="5dp"
+                                android:textAlignment="center"
+                                android:text="No\nCD CASHBACK"/>
+
+                            <RadioButton
+                                android:id="@+id/viaMobAppRB"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"/>
+                        </RelativeLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+                    
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/commentsCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:layout_below="@+id/shopViaCard">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/commentId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Comments"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@android:color/black"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/commentRecyle"
+                        android:layout_below="@+id/commentId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"/>
+                    <TextView
+                        android:id="@+id/viewAllcmnt"
+                        android:layout_below="@+id/commentRecyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="viewEnd"
+                        android:textAllCaps="true"
+                        android:text="View All Comments"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:textColor="#077EE6"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/websiteBtn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="copy code and go to store"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textAllCaps="true"
+                android:background="@color/colorPrimary"
+                android:layout_below="@+id/commentsCard"
+                android:layout_alignParentBottom="true">
+
+            </Button>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
+

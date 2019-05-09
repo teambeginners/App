@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFDFDF"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/balanceCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#454554"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/yourBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Balance in your account"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:padding="5dp"/>
+
+                <ImageView
+                    android:id="@+id/cashImgBalance"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/yourBalance"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/cash" />
+
+                <TextView
+                    android:id="@+id/currBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/yourBalance"
+                    android:layout_toEndOf="@+id/cashImgBalance"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#006920"
+                    android:text="Tk. 20"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/balanceAvail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/currBalance"
+                    android:text="available"
+                    android:textSize="16dp"
+                    android:layout_marginTop="5dp"
+                    android:textAllCaps="true"
+                    android:layout_marginStart="10dp"
+                    android:textAlignment="center"/>
+
+                <ImageView
+                    android:id="@+id/cashImgPending"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_toStartOf="@+id/pendingBalance"
+                    android:layout_below="@+id/yourBalance"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/cash" />
+
+                <TextView
+                    android:id="@+id/pendingBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/yourBalance"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Tk.10"
+                    android:textColor="#000"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/pendingTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pendingBalance"
+                    android:text="Pending"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16dp"
+                    android:textAllCaps="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/whatIs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@+id/balanceAvail"
+                    android:text="What's this?"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/balanceAvail"
+                    android:layout_toEndOf="@+id/whatIs"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:text="learn more"
+                    android:textColor="#054FA7"
+                    android:textAllCaps="true"/>
+
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/summeryCard"
+            android:layout_below="@+id/balanceCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/referals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Referrals"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"/>
+
+                <TextView
+                    android:id="@+id/earn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/referals"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="30dp"
+                    android:textColor="@android:color/black"
+                    android:text="Earn 10%"/>
+
+                <TextView
+                    android:id="@+id/invite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/earn"
+                    android:layout_margin="10dp"
+                    android:text="Invite your friends to Coupon Dunia and earn 10% of their cashback earnings forever,"
+                    />
+
+                <TextView
+                    android:id="@+id/inviteBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/invite"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:textStyle="bold"
+                    android:text="invite now"
+                    android:textAllCaps="true"
+                    android:textColor="#054FA7"/>
+            </RelativeLayout>
+
+
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

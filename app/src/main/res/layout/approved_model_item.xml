@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <ImageView
+            android:id="@+id/usersImgAp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/swiggy"/>
+        <TextView
+            android:id="@+id/usersNameAp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/usersImgAp"
+            android:layout_marginStart="5dp"
+            android:text="Swiggy"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+
+
+        <TextView
+            android:id="@+id/boughtProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/usersNameAp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/usersImgAp"
+            android:text="Bought product from Swiggy"
+            android:textColor="#006920" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/codeUsed"
+            android:text="Code: HFDJGS"
+            android:layout_below="@id/usersImgAp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/approvedTime"
+            android:text="Approved 2 days ago"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:layout_below="@id/usersImgAp"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>
