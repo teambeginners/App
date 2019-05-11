@@ -20,7 +20,7 @@
 
             <TextView
                 android:id="@+id/proName"
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_toEndOf="@+id/proImage"
@@ -29,7 +29,7 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/proCategory"
+                android:id="@+id/offerCategory"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/proName"
@@ -39,11 +39,11 @@
                 android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/offerDetails"
+                android:id="@+id/bestOfferDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/proImage"
-                android:layout_marginTop="5dp"
+                android:layout_below="@+id/offerCategory"
+                android:layout_marginTop="10dp"
                 android:text="We are giving the best ofers for you!!"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
@@ -53,7 +53,7 @@
                 android:id="@+id/cdOffer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/offerDetails"
+                android:layout_below="@+id/bestOfferDetails"
                 android:layout_marginTop="5dp"
                 android:text=" Upto 20% Cd cashback avialable"
                 android:textAllCaps="true"
