@@ -12,7 +12,7 @@
             android:padding="10dp">
 
             <ImageView
-                android:id="@+id/proImage"
+                android:id="@+id/thumbnail"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:scaleType="centerCrop"
@@ -23,7 +23,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_toEndOf="@+id/proImage"
+                android:layout_toEndOf="@+id/thumbnail"
                 android:text="Swiggy"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/proName"
                 android:layout_marginLeft="10dp"
-                android:layout_toEndOf="@+id/proImage"
+                android:layout_toEndOf="@+id/thumbnail"
                 android:text="Food and Drinks "
                 android:textSize="12sp" />
 

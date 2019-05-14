@@ -7,11 +7,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.firstapp.activities.OfferDetailsActivity;
 import com.example.firstapp.activities.R;
 import com.example.firstapp.models.BestItemModel;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -43,7 +45,11 @@ public class BestOffersAdapter extends RecyclerView.Adapter<BestOffersAdapter.My
         BestItemModel dataModel = recyclerdata.get(position);
         holder.name.setText(dataModel.getTitle());
         holder.description.setText(dataModel.getDescription());
-        holder.id.setText(dataModel.getId());
+
+        Picasso.with(mContext)
+                .load(dataModel.getThumb())
+                .into(holder.thumbnail);
+
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,7 +79,8 @@ public class BestOffersAdapter extends RecyclerView.Adapter<BestOffersAdapter.My
     }
 
     class MyHolder extends RecyclerView.ViewHolder {
-        TextView name, description, id;
+        TextView name, description;
+        ImageView thumbnail;
         View mView;
 
         public MyHolder(View itemView) {
@@ -81,7 +88,7 @@ public class BestOffersAdapter extends RecyclerView.Adapter<BestOffersAdapter.My
             mView = itemView;
             name = itemView.findViewById(R.id.proName);
             description = itemView.findViewById(R.id.offerCategory);
-            id = itemView.findViewById(R.id.bestOfferDetails);
+            thumbnail = itemView.findViewById(R.id.thumbnail);
 
 
         }

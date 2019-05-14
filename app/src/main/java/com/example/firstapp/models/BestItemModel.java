@@ -1,20 +1,29 @@
 package com.example.firstapp.models;
 
 
-
 public class BestItemModel {
 
     public String title;
     public String description;
     public String id;
+    private String thumb;
 
     public BestItemModel() {
 
     }
 
-    public BestItemModel(String title, String description) {
+    public BestItemModel(String title, String description, String thumb) {
         this.title = title;
         this.description = description;
+        this.thumb = thumb;
+    }
+
+    public String getThumb() {
+        return thumb;
+    }
+
+    public void setThumb(String thumb) {
+        this.thumb = thumb;
     }
 
     public String getId() {
