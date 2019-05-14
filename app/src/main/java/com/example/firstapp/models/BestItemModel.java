@@ -8,6 +8,15 @@ public class BestItemModel {
     public String description;
     public String id;
 
+    public BestItemModel() {
+
+    }
+
+    public BestItemModel(String title, String description) {
+        this.title = title;
+        this.description = description;
+    }
+
     public String getId() {
         return id;
     }

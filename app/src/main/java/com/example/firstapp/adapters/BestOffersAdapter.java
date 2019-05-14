@@ -15,9 +15,6 @@ import com.example.firstapp.models.BestItemModel;
 
 import java.util.List;
 
-/**
- * Created by csa on 3/3/2017.
- */
 
 public class BestOffersAdapter extends RecyclerView.Adapter<BestOffersAdapter.MyHolder> {
 

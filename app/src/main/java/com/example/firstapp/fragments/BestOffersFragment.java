@@ -3,10 +3,8 @@ package com.example.firstapp.fragments;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,19 +14,17 @@ import com.example.firstapp.activities.R;
 import com.example.firstapp.adapters.BestOffersAdapter;
 import com.example.firstapp.models.BestItemModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class BestOffersFragment extends Fragment {
     RecyclerView recyclerView;
 
-    ArrayList<BestItemModel>itemList;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View rootView = inflater.inflate(R.layout.best_recycle, container, false);
         recyclerView = rootView.findViewById(R.id.recyclerView1);
-        new Viewdata().execute("http://www.mytrendin.com/wp-json/wp/v2/posts?search=intent");
+        new Viewdata().execute("https://api.myjson.com/bins/xmfu2");
         return rootView;
 
     }
@@ -36,11 +32,6 @@ public class BestOffersFragment extends Fragment {
     private class Viewdata extends Urltask {
 
 
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-
-        }
 
         @Override
         protected void onPostExecute(List<BestItemModel> dataModels) {
@@ -48,11 +39,7 @@ public class BestOffersFragment extends Fragment {
             BestOffersAdapter recyclerviewAdapter = new BestOffersAdapter(getContext(), dataModels);
             RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
             recyclerView.setLayoutManager(layoutManager);
-            recyclerView.setItemAnimator(new DefaultItemAnimator());
             recyclerView.setAdapter(recyclerviewAdapter);
-
-
-            Log.i("Delwar Hossain", "" + dataModels);
 
         }
 
