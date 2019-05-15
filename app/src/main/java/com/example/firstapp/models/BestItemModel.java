@@ -6,16 +6,27 @@ public class BestItemModel {
     public String title;
     public String description;
     public String id;
-    private String thumb;
+    public String thumb;
+    public String url;
+
 
     public BestItemModel() {
 
     }
 
-    public BestItemModel(String title, String description, String thumb) {
+    public BestItemModel(String title, String description, String thumb, String url) {
         this.title = title;
         this.description = description;
         this.thumb = thumb;
+        this.url = url;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getThumb() {

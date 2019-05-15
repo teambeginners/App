@@ -1,6 +1,5 @@
 package com.example.firstapp.activities;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -73,31 +72,27 @@ public class MainActivity extends AppCompatActivity
 
         setSliderViews();
 
-        Toolbar toolbar2 = (Toolbar) findViewById(R.id.mainToolbar);
+        Toolbar toolbar2 = findViewById(R.id.mainToolbar);
         setSupportActionBar(toolbar2);
 
 
-
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar2, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        viewPager = (ViewPager)findViewById(R.id.tab_viewpager);
+        viewPager = findViewById(R.id.tab_viewpager);
         if (viewPager != null){
             setupViewPager(viewPager);
         }
 
 
-
-
-        TabLayout tabLayout = (TabLayout)findViewById(R.id.tabLayout);
+        TabLayout tabLayout = findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
 
 
@@ -181,30 +176,34 @@ public class MainActivity extends AppCompatActivity
 
         for (int i = 0; i <= 3; i++) {
 
+
             DefaultSliderView sliderView = new DefaultSliderView(this);
 
-            switch (i) {
-                case 0:
-                    sliderView.setImageDrawable(R.drawable.veg);
-                    sliderView.setDescription("Delivery Guru");
-//                    sliderView.setImageUrl("https://images.pexels.com/photos/547114/pexels-photo-547114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-                    break;
-                case 1:
-                    sliderView.setImageDrawable(R.drawable.foodpanda);
-                    sliderView.setDescription("Foodpanda");
-//                    sliderView.setImageUrl("https://images.pexels.com/photos/218983/pexels-photo-218983.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-                    break;
-                case 2:
-                    sliderView.setImageDrawable(R.drawable.shoes);
-                    sliderView.setDescription("");
-//                    sliderView.setImageUrl("https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
-                    break;
-                case 3:
-                    sliderView.setImageDrawable(R.drawable.veg);
-                    sliderView.setDescription("");
-//                    sliderView.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-                    break;
-            }
+
+            sliderView.setImageUrl("https://firebasestorage.googleapis.com/v0/b/omnibit-772ae.appspot.com/o/1aa.png?alt=media&token=d951a21f-2e0c-407d-a99e-b58ce3ca668a");
+
+//            switch (i) {
+//                case 0:
+//                    sliderView.setImageDrawable(R.drawable.veg);
+//                    sliderView.setDescription("Delivery Guru");
+////                    sliderView.setImageUrl("https://images.pexels.com/photos/547114/pexels-photo-547114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+//                    break;
+//                case 1:
+//                    sliderView.setImageDrawable(R.drawable.foodpanda);
+//                    sliderView.setDescription("Foodpanda");
+////                    sliderView.setImageUrl("https://images.pexels.com/photos/218983/pexels-photo-218983.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+//                    break;
+//                case 2:
+//                    sliderView.setImageDrawable(R.drawable.shoes);
+//                    sliderView.setDescription("");
+////                    sliderView.setImageUrl("https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+//                    break;
+//                case 3:
+//                    sliderView.setImageDrawable(R.drawable.veg);
+//                    sliderView.setDescription("");
+////                    sliderView.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+//                    break;
+//            }
 
             sliderView.setImageScaleType(ImageView.ScaleType.CENTER_CROP);
             final int finalI = i;
