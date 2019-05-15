@@ -1,9 +1,11 @@
 package com.example.firstapp.activities;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -33,8 +35,8 @@ public class OfferDetailsActivity extends AppCompatActivity {
         String categ = intent.getStringExtra("cate");
         ((TextView) findViewById(R.id.detailsCategory)).setText(categ);
 
-
-
+        Bitmap bitmap = intent.getParcelableExtra("picture");
+        ((ImageView) findViewById(R.id.proImage)).setImageBitmap(bitmap);
     }
 
 }
