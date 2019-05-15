@@ -12,7 +12,7 @@
             android:padding="10dp">
 
             <ImageView
-                android:id="@+id/proImage"
+                android:id="@+id/thumbnail"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:scaleType="centerCrop"
@@ -23,7 +23,7 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_toEndOf="@+id/proImage"
+                android:layout_toEndOf="@+id/thumbnail"
                 android:text="Swiggy"
                 android:textColor="@android:color/black"
                 android:textSize="18sp" />
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/proName"
                 android:layout_marginLeft="10dp"
-                android:layout_toEndOf="@+id/proImage"
+                android:layout_toEndOf="@+id/thumbnail"
                 android:text="Food and Drinks "
                 android:textSize="12sp" />
 
@@ -55,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/bestOfferDetails"
                 android:layout_marginTop="5dp"
+                android:visibility="gone"
                 android:text=" Upto 20% Cd cashback avialable"
                 android:textAllCaps="true"
                 android:textColor="#006920"
@@ -92,6 +93,7 @@
                 android:drawableLeft="@drawable/ic_check"
                 android:layout_marginTop="15dp"
                 android:text="Vairfied Offer"
+                android:visibility="gone"
                 android:textColor="#08FF30"
                 android:textSize="10sp" />
 
@@ -101,6 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="10dp"
+                android:visibility="gone"
                 android:drawableLeft="@drawable/ic_star"
                 android:text="Editor's Pick"
                 android:textColor="#FF7711"

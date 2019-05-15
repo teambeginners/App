@@ -1,6 +1,5 @@
 package com.example.firstapp.activities;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -73,31 +72,27 @@ public class MainActivity extends AppCompatActivity
 
         setSliderViews();
 
-        Toolbar toolbar2 = (Toolbar) findViewById(R.id.mainToolbar);
+        Toolbar toolbar2 = findViewById(R.id.mainToolbar);
         setSupportActionBar(toolbar2);
 
 
-
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar2, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        viewPager = (ViewPager)findViewById(R.id.tab_viewpager);
+        viewPager = findViewById(R.id.tab_viewpager);
         if (viewPager != null){
             setupViewPager(viewPager);
         }
 
 
-
-
-        TabLayout tabLayout = (TabLayout)findViewById(R.id.tabLayout);
+        TabLayout tabLayout = findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
 
 
@@ -179,39 +174,38 @@ public class MainActivity extends AppCompatActivity
 
     private void setSliderViews() {
 
-        for (int i = 0; i <= 3; i++) {
+        for (int i = 1; i <= 6; i++) {
+
 
             DefaultSliderView sliderView = new DefaultSliderView(this);
 
             switch (i) {
-                case 0:
-                    sliderView.setImageDrawable(R.drawable.veg);
-                    sliderView.setDescription("Delivery Guru");
-//                    sliderView.setImageUrl("https://images.pexels.com/photos/547114/pexels-photo-547114.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-                    break;
                 case 1:
-                    sliderView.setImageDrawable(R.drawable.foodpanda);
-                    sliderView.setDescription("Foodpanda");
-//                    sliderView.setImageUrl("https://images.pexels.com/photos/218983/pexels-photo-218983.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+                    sliderView.setImageUrl("https://firebasestorage.googleapis.com/v0/b/omnibit-772ae.appspot.com/o/1aa.png?alt=media&token=d951a21f-2e0c-407d-a99e-b58ce3ca668a");
                     break;
                 case 2:
-                    sliderView.setImageDrawable(R.drawable.shoes);
-                    sliderView.setDescription("");
-//                    sliderView.setImageUrl("https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+                    sliderView.setImageUrl("https://firebasestorage.googleapis.com/v0/b/omnibit-772ae.appspot.com/o/1a.png?alt=media&token=1dfc5f0e-0e9f-4983-86c4-a73b8b89cbf0");
                     break;
                 case 3:
-                    sliderView.setImageDrawable(R.drawable.veg);
-                    sliderView.setDescription("");
-//                    sliderView.setImageUrl("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+                    sliderView.setImageUrl("https://firebasestorage.googleapis.com/v0/b/omnibit-772ae.appspot.com/o/1aaaa.png?alt=media&token=89783e81-f6ed-4846-9c3e-43de8947814f");
+                    break;
+                case 4:
+                    sliderView.setImageUrl("https://firebasestorage.googleapis.com/v0/b/omnibit-772ae.appspot.com/o/1aaaaa.png?alt=media&token=05a59df4-3376-45c5-b4f2-00798d3a71e2");
+                    break;
+                case 5:
+                    sliderView.setImageUrl("https://firebasestorage.googleapis.com/v0/b/omnibit-772ae.appspot.com/o/1aaaa.png?alt=media&token=89783e81-f6ed-4846-9c3e-43de8947814f");
+                    break;
+
+                case 6:
+                    sliderView.setImageUrl("https://firebasestorage.googleapis.com/v0/b/omnibit-772ae.appspot.com/o/1aaaaaaaaa.png?alt=media&token=570265c1-035c-495d-beb5-1dae84158ae2");
                     break;
             }
 
-            sliderView.setImageScaleType(ImageView.ScaleType.CENTER_CROP);
             final int finalI = i;
             sliderView.setOnSliderClickListener(new SliderView.OnSliderClickListener() {
                 @Override
                 public void onSliderClick(SliderView sliderView) {
-                    Toast.makeText(MainActivity.this, "This is slider " + (finalI + 1), Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getApplicationContext(), OfferDetailsActivity.class));
                 }
             });
 
