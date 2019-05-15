@@ -36,7 +36,7 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
             <com.smarteist.autoimageslider.SliderLayout
                 android:layout_width="match_parent"
-                android:scaleType="fitEnd"
+                android:scaleType="center"
                 android:layout_height="180dp"
                 android:layout_alignParentTop="true"
                 android:id="@+id/imageSlider"/>

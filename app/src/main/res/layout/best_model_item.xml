@@ -55,6 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/bestOfferDetails"
                 android:layout_marginTop="5dp"
+                android:visibility="gone"
                 android:text=" Upto 20% Cd cashback avialable"
                 android:textAllCaps="true"
                 android:textColor="#006920"
@@ -92,6 +93,7 @@
                 android:drawableLeft="@drawable/ic_check"
                 android:layout_marginTop="15dp"
                 android:text="Vairfied Offer"
+                android:visibility="gone"
                 android:textColor="#08FF30"
                 android:textSize="10sp" />
 
@@ -101,6 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="10dp"
+                android:visibility="gone"
                 android:drawableLeft="@drawable/ic_star"
                 android:text="Editor's Pick"
                 android:textColor="#FF7711"

@@ -35,6 +35,8 @@ public class BestOffersAdapter extends RecyclerView.Adapter<BestOffersAdapter.My
 
         final View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.best_model_item, parent, false);
         final MyHolder myHolder = new MyHolder(view);
+
+
         return myHolder;
 
     }
@@ -71,6 +73,18 @@ public class BestOffersAdapter extends RecyclerView.Adapter<BestOffersAdapter.My
             }
         });
 
+        if (position % 3 == 0) {
+
+            holder.cashback.setVisibility(View.VISIBLE);
+            holder.pick.setVisibility(View.VISIBLE);
+            holder.varified.setVisibility(View.VISIBLE);
+        } else {
+
+            holder.cashback.setVisibility(View.GONE);
+            holder.pick.setVisibility(View.GONE);
+            holder.varified.setVisibility(View.GONE);
+        }
+
     }
 
     @Override
@@ -79,7 +93,7 @@ public class BestOffersAdapter extends RecyclerView.Adapter<BestOffersAdapter.My
     }
 
     class MyHolder extends RecyclerView.ViewHolder {
-        TextView name, description;
+        TextView name, description, cashback, pick, varified;
         ImageView thumbnail;
         View mView;
 
@@ -89,6 +103,10 @@ public class BestOffersAdapter extends RecyclerView.Adapter<BestOffersAdapter.My
             name = itemView.findViewById(R.id.proName);
             description = itemView.findViewById(R.id.offerCategory);
             thumbnail = itemView.findViewById(R.id.thumbnail);
+
+            cashback = itemView.findViewById(R.id.cdOffer);
+            pick = itemView.findViewById(R.id.editors);
+            varified = itemView.findViewById(R.id.varify);
 
 
         }
