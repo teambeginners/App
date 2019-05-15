@@ -24,7 +24,7 @@ public class BestOffersFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.best_recycle, container, false);
         recyclerView = rootView.findViewById(R.id.recyclerView1);
-        new Viewdata().execute("https://api.myjson.com/bins/xmfu2");
+        new Viewdata().execute("https://gist.githubusercontent.com/delwar36/4c70788de39565039bbaed32c6988b99/raw/690ba2af2910be5be43d53284db2578ffa3201f7/gistfile1.txt");
         return rootView;
 
     }
