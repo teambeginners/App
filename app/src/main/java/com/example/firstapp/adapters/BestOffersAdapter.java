@@ -3,6 +3,7 @@ package com.example.firstapp.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,6 +59,7 @@ public class BestOffersAdapter extends RecyclerView.Adapter<BestOffersAdapter.My
                 TextView textView = v.findViewById(R.id.proName);
                 TextView textView1 = v.findViewById(R.id.bestOfferDetails);
                 TextView textView2 = v.findViewById(R.id.offerCategory);
+                ImageView imageView = v.findViewById(R.id.thumbnail);
 
                 String bestCat = textView2.getText().toString();
 
@@ -65,9 +67,15 @@ public class BestOffersAdapter extends RecyclerView.Adapter<BestOffersAdapter.My
                 String details = textView1.getText().toString();
                 Intent intent = new Intent(mContext, OfferDetailsActivity.class);
 
+
                 intent.putExtra("cName", cname);
                 intent.putExtra("bDetails", details);
                 intent.putExtra("cate", bestCat);
+
+                imageView.buildDrawingCache();
+                Bitmap bitmap = imageView.getDrawingCache();
+
+                intent.putExtra("picture", bitmap);
 
                 mContext.startActivity(intent);
             }
